@@ -86,10 +86,10 @@ class HomePage extends React.Component {
           <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item"  onSetActive={this.countGpa}>
             Education
           </Link>
-          <Link activeClass="active-item" to="Research-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+          <Link activeClass="active-item" to="Research-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
             Research
           </Link>
-          <Link activeClass="active-item" to="Skills-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+          <Link activeClass="active-item" to="Skills-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
             Skills
           </Link>
           <Link activeClass="active-item" to="Achievements-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
@@ -126,7 +126,9 @@ class HomePage extends React.Component {
             </div>
             ): <div></div>}
         </Element>
+        <FadeInSection>
         <EducationPage/>
+        </FadeInSection>
         <FadeInSection>
         <ResearchPage/>
         </FadeInSection>
