@@ -1,3 +1,33 @@
+.fade-in {
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 3s; /* Firefox < 16 */
+      -ms-animation: fadein 3s; /* Internet Explorer */
+       -o-animation: fadein 3s; /* Opera < 12.1 */
+          animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 .home-container {
   display: flex;
   flex-direction: column;
@@ -24,6 +54,9 @@
   transition: color 0.5s;
   text-align: center;
   transition: color 0.5s ;
+}
+.active-item {
+  color: white;
 }
 .home-page-section {
   display: flex;
@@ -54,6 +87,7 @@
 .home-page-photo-div {
   position: relative;
   margin-left: -5%;
+  transition: all 0.5s;
 }
 .home-page-photo {
   height: 800px;
@@ -89,12 +123,12 @@
     font-size: 50px;
   }
 }
-.Education-page-section {
+.Achievements-page-section {
   display: flex;
   width: 100%;
-  height: 800px;
+  height: 890px;
   overflow: hidden;
-  background-color: #1f1f1f;
+  background-color: tomato;
 }
 .home-page-description {
   cursor: default;

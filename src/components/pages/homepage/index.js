@@ -3,7 +3,9 @@ import './styles.css'
 import amayaPhoto from '../../../assets/images/amaya.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare, faMedium, faLinkedin, faYoutubeSquare } from "@fortawesome/free-brands-svg-icons"
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
+import { EducationPage, ResearchPage, SkillsPage, AchievementsPage } from '../index'
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -12,16 +14,7 @@ class HomePage extends React.Component {
     }
     this.navItems = ['About','Education', 'Research', 'Skills', 'Achievements']
   }
-  
-  setNavBarItem = (item) => {
-    this.navItems.forEach((id) => {
-      if (id === item) {
-        document.getElementById('nav-item-'+id).style.color = 'white';
-      } else {
-        document.getElementById('nav-item-'+id).style.color = '#556b2f';
-      }
-    });
-  }
+
   onClickSocialIcon = (item) => {
     switch (item) {
       case 'LinkedIn' :
@@ -47,27 +40,39 @@ class HomePage extends React.Component {
       this.setState({changeDescription: false});
     }
   }
-  onclickNavigationItem = (item) => {
-    console.log('onclickNavigationItem', item)
-    this.setNavBarItem(item);
-  }
   componentDidMount = () => {
     window.addEventListener("resize", this.changeDescriptionDiv);
-    this.onclickNavigationItem('About')
     this.changeDescriptionDiv();
+    Events.scrollEvent.register('begin', function(to, element) {});
+    Events.scrollEvent.register('end', function(to, element) {});
+    scrollSpy.update();
+  }
+  componentWillUnmount = () =>  {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
   }
 
   render() {
     return (
       <div id="home-container" className="home-container">
         <div className="nav-bar">
-          <div id="nav-item-About" className="nav-bar-item" onClick={() => {this.onclickNavigationItem('About')}}>About</div>
-          <div id="nav-item-Education" className="nav-bar-item" onClick={() => {this.onclickNavigationItem('Education')}}>Education</div>
-          <div id="nav-item-Research" className="nav-bar-item" onClick={() => {this.onclickNavigationItem('Research')}}>Research</div>
-          <div id="nav-item-Skills" className="nav-bar-item" onClick={() => {this.onclickNavigationItem('Skills')}}>Skills</div>
-          <div id="nav-item-Achievements" className="nav-bar-item" onClick={() => {this.onclickNavigationItem('Achievements')}}>Achievements</div>
+          <Link activeClass="active-item" to="Home-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+            About
+          </Link>
+          <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+            Education
+          </Link>
+          <Link activeClass="active-item" to="Research-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+            Research
+          </Link>
+          <Link activeClass="active-item" to="Skills-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+            Skills
+          </Link>
+          <Link activeClass="active-item" to="Achievements-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+            Achievements
+          </Link>
         </div>
-        <div className="home-page-section">
+        <Element name="Home-page-section" className="home-page-section fade-in">
           <div className="home-page-welcome">
             <div className="home-page-fname">Amaya</div>
             <div className="home-page-lname">Dharmasiri</div>
@@ -84,7 +89,7 @@ class HomePage extends React.Component {
               potential to meet deadlines.
               </p>
             </div>
-            ): null}
+            ): <div></div>}
           </div>
           <div className="home-page-photo-div"><img src={amayaPhoto} className="home-page-photo"/></div>
           <div></div>
@@ -95,9 +100,12 @@ class HomePage extends React.Component {
               potential to meet deadlines.
               </p>
             </div>
-            ): null}
-        </div>
-        <div className="Education-page-section"></div>
+            ): <div></div>}
+        </Element>
+        <EducationPage/>
+        <ResearchPage/>
+        <SkillsPage/>
+        <AchievementsPage/>
       </div>
     );
   }
