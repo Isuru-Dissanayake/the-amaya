@@ -41,7 +41,7 @@
   height: 90px;
   position: fixed;
   background-color: #222222;
-  z-index: 1;
+  z-index: 5;
 }
 .nav-bar-item {
   cursor: default;

@@ -5,3 +5,43 @@
   overflow: hidden;
   background-color: #1f1f1f;
 }
+.education-page-title {
+  cursor: default;
+  display: flex;
+  position: absolute;
+  font-size: 20vw;
+  color: #222222;
+  margin-top: -10%;
+  z-index: 1;
+}
+.hover-to-tomato {
+  color: #222222;
+  transition: color 0.5s;
+}
+.hover-to-tomato:hover {
+  color: tomato;
+}
+.education-page-cards-container {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+  z-index: 2;
+}
+.educatio-page-card{
+  margin: 40px;
+  padding: 10px;
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  background: rgba( 255, 255, 255, 0.25 );
+  backdrop-filter: blur( 6.0px );
+  -webkit-backdrop-filter: blur( 6.0px );
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.educatio-page-card:hover {
+  height: 600px;
+}
