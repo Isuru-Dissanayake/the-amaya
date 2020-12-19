@@ -10,7 +10,8 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      changeDescription : false
+      changeDescription : false,
+      title : "Amaya Dharmasiri"
     }
     this.navItems = ['About','Education', 'Research', 'Skills', 'Achievements']
   }

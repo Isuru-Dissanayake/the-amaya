@@ -55,6 +55,9 @@
   text-align: center;
   transition: color 0.5s ;
 }
+.nav-bar-item:hover {
+  color: tomato;
+}
 .active-item {
   color: white;
 }
@@ -100,6 +103,9 @@
   transform: scale(1.1);
 }
 @media screen and (min-width: 801px) {
+  .home-page-photo-div {
+    margin-left: -5%;
+  }
   .home-page-welcome {
     margin-left: 18%;
   }
@@ -113,6 +119,9 @@
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 800px) {
+  .home-page-photo-div {
+    margin-left: -15%;
+  }
   .home-page-welcome {
     margin-left: 5%;
   }
@@ -162,5 +171,5 @@
   transition: all 0.5s;
 }
 .home-social-icons:hover {
-  color: white;
+  color: tomato;
 }
