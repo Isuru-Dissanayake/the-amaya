@@ -6,10 +6,31 @@ import { faGithubSquare, faMedium, faLinkedin, faYoutubeSquare } from "@fortawes
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import { EducationPage, ResearchPage, SkillsPage, AchievementsPage } from '../index'
+
+function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(true);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+  return (
+    <div
+      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      ref={domRef}
+    >
+      {props.children}
+    </div>
+  );
+}
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showEduCard: false,
       changeDescription : false,
       title : "Amaya Dharmasiri"
     }
@@ -52,7 +73,9 @@ class HomePage extends React.Component {
     Events.scrollEvent.remove('begin');
     Events.scrollEvent.remove('end');
   }
-
+  countGpa = () => {
+    this.setState({showEduCard: true})
+  }
   render() {
     return (
       <div id="home-container" className="home-container">
@@ -60,7 +83,7 @@ class HomePage extends React.Component {
           <Link activeClass="active-item" to="Home-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
             About
           </Link>
-          <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+          <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item"  onSetActive={this.countGpa}>
             Education
           </Link>
           <Link activeClass="active-item" to="Research-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
@@ -104,7 +127,9 @@ class HomePage extends React.Component {
             ): <div></div>}
         </Element>
         <EducationPage/>
+        <FadeInSection>
         <ResearchPage/>
+        </FadeInSection>
         <SkillsPage/>
         <AchievementsPage/>
       </div>

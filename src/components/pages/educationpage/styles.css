@@ -4,6 +4,7 @@
   height: 800px;
   overflow: hidden;
   background-color: #1f1f1f;
+  transition: all 0.5s;
 }
 .education-page-title {
   cursor: default;
@@ -29,19 +30,62 @@
   height: 500px;
   width: 100%;
   z-index: 2;
+  transition: all 0.5s;
 }
 .educatio-page-card{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
   margin: 40px;
   padding: 10px;
   width: 400px;
   height: 500px;
   background-color: white;
-  background: rgba( 255, 255, 255, 0.25 );
+  background: rgba(88, 88, 88, 0.25);
   backdrop-filter: blur( 6.0px );
   -webkit-backdrop-filter: blur( 6.0px );
   border-radius: 10px;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 .educatio-page-card:hover {
-  height: 600px;
+  border-top: 10px solid tomato;
+  border-bottom: 10px solid tomato;
+}
+.education-page-card-title {
+  font-size: 20px;
+  color: white;
+}
+.education-page-card-icon{
+  font-size: 60px;
+  color: #8eb849;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+.education-page-card-subtitle {
+  font-size: 16px;
+  color: rgb(211, 211, 211);
+  padding: 10px;
+} 
+.education-page-card-number-title {
+  font-size: 20px;
+  color: white;
+  padding-top: 20px;
+}
+.education-page-card-number {
+  font-size: 80px;
+  color: rgb(211, 211, 211);
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
