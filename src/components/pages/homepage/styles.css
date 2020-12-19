@@ -1,13 +1,17 @@
 .home-container {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
-  height: 100vh;
 }
 .nav-bar {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  height: 70px;
-  width: 100%;
+  height: 90px;
+  position: fixed;
+  background-color: #222222;
+  z-index: 1;
 }
 .nav-bar-item {
   cursor: default;
@@ -20,4 +24,74 @@
   transition: color 0.5s;
   text-align: center;
   transition: color 0.5s ;
+}
+.home-page-section {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  margin-top: 110px;
+  overflow: hidden;
+}
+.home-page-welcome {
+  cursor: default;
+  margin-top: 100px;
+  margin-left: 20%;
+  transition: all 0.5s;
+}
+.home-page-fname{
+  color: white;
+  font-size: 90px;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.home-page-lname{
+  color: white;
+  font-size: 90px;
+  font-weight: bold;
+  margin-top: -20px;
+  transition: all 0.5s;
+}
+.home-page-photo-div {
+  position: absolute;
+  margin-left: 50%;
+}
+.home-page-photo {
+  margin-left: -50%;
+  height: 600px;
+  filter: brightness(50%);
+  transition: filter 0.5s;
+}
+.home-page-photo:hover {
+  filter: brightness(70%);
+}
+@media screen and (min-width: 601px) {
+  .home-page-welcome {
+    margin-left: 18%;
+  }
+  .home-page-fname{
+    font-size: 90px;
+  }
+  .home-page-lname{
+    font-size: 90px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .home-page-welcome {
+    margin-left: 5%;
+  }
+  .home-page-fname {
+    font-size: 50px;
+  }
+  .home-page-lname{
+    font-size: 50px;
+  }
+}
+.Education-page-section {
+  display: flex;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  background-color: #1f1f1f;
 }

@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import './styles.css'
+import amayaPhoto from '../../../assets/images/amaya.png'
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -33,8 +34,14 @@ class HomePage extends React.Component {
           <div id="nav-item-Skills" className="nav-bar-item" onClick={() => {this.onclickNavigationItem('Skills')}}>Skills</div>
           <div id="nav-item-Achievements" className="nav-bar-item" onClick={() => {this.onclickNavigationItem('Achievements')}}>Achievements</div>
         </div>
-        <div>
+        <div className="home-page-section">
+          <div className="home-page-welcome">
+            <div className="home-page-fname">Amaya</div>
+            <div className="home-page-lname">Dharmasiri</div>
+          </div>
+          <div className="home-page-photo-div"><img src={amayaPhoto} className="home-page-photo"/></div>
         </div>
+        <div className="Education-page-section"></div>
       </div>
     );
   }
