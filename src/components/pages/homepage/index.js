@@ -4,6 +4,7 @@ import amayaPhoto from '../../../assets/images/amaya.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare, faMedium, faLinkedin, faYoutubeSquare } from "@fortawesome/free-brands-svg-icons"
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import ReactGA from 'react-ga';
 
 import { EducationPage, ResearchPage, SkillsPage, AchievementsPage } from '../index'
 
@@ -67,6 +68,7 @@ class HomePage extends React.Component {
     }
   }
   componentDidMount = () => {
+    ReactGA.initialize('256784480');
     window.addEventListener("resize", this.changeDescriptionDiv);
     this.changeDescriptionDiv();
     Events.scrollEvent.register('begin', function(to, element) {});
