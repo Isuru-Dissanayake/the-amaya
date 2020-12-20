@@ -75,11 +75,11 @@
   backdrop-filter: blur( 6.0px );
   -webkit-backdrop-filter: blur( 6.0px );
   border-radius: 10px;
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 .educatio-page-card:hover {
-  border-top: 10px solid tomato;
-  border-bottom: 10px solid tomato;
+  border-top: 20px solid tomato;
+  border-bottom: 20px solid tomato;
 }
 .education-page-card-title {
   font-size: 20px;

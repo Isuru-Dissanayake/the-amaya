@@ -19,7 +19,7 @@ function FadeInSection(props) {
   }, []);
   return (
     <div
-      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      className={isVisible? "fade-in" : ""}
       ref={domRef}
     >
       {props.children}
@@ -125,10 +125,8 @@ class HomePage extends React.Component {
               </p>
             </div>
             ): <div></div>}
-        </Element>
-        <FadeInSection>
+        </Element>      
         <EducationPage/>
-        </FadeInSection>
         <FadeInSection>
         <ResearchPage/>
         </FadeInSection>

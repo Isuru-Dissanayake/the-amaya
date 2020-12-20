@@ -55,7 +55,6 @@ class EducationPage extends React.Component {
             <div className="education-page-card-number-title">GPA</div>
             <div className="education-page-card-number">4.14</div>
             <div className="education-page-card-subtitle">September 2017 – Present</div>
-            
           </div>
           <div className="educatio-page-card card">
             <FontAwesomeIcon icon={faBriefcase} className="education-page-card-icon"/>
