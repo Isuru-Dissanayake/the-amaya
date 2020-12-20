@@ -26,6 +26,7 @@ function FadeInSection(props) {
     </div>
   );
 }
+
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +37,7 @@ class HomePage extends React.Component {
     }
     this.navItems = ['About','Education', 'Research', 'Skills', 'Achievements']
   }
-
+  
   onClickSocialIcon = (item) => {
     switch (item) {
       case 'LinkedIn' :
@@ -50,6 +51,9 @@ class HomePage extends React.Component {
         break
       case 'Youtube' :
         var url = "https://www.youtube.com/channel/UC84JMPB7UetbB2mtMW0vdLQ/"
+        break
+      case 'CV' :
+        var url = "https://github.com/Isuru-Dissanayake/the-amaya/raw/master/src/assets/docs/Amaya_Dharmasiri.pdf"
         break
     }
     window.open(url);
@@ -73,9 +77,6 @@ class HomePage extends React.Component {
     Events.scrollEvent.remove('begin');
     Events.scrollEvent.remove('end');
   }
-  countGpa = () => {
-    this.setState({showEduCard: true})
-  }
   render() {
     return (
       <div id="home-container" className="home-container">
@@ -83,7 +84,7 @@ class HomePage extends React.Component {
           <Link activeClass="active-item" to="Home-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
             About
           </Link>
-          <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item"  onSetActive={this.countGpa}>
+          <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
             Education
           </Link>
           <Link activeClass="active-item" to="Research-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
@@ -105,6 +106,7 @@ class HomePage extends React.Component {
               <FontAwesomeIcon icon={faGithubSquare} className="home-social-icons" onClick={() => {this.onClickSocialIcon('Github')}}/>
               <FontAwesomeIcon icon={faMedium} className="home-social-icons" onClick={() => {this.onClickSocialIcon('Medium')}}/>
               <FontAwesomeIcon icon={faYoutubeSquare} className="home-social-icons" onClick={() => {this.onClickSocialIcon('Youtube')}}/>
+              <div className="download-cv" onClick={() => {this.onClickSocialIcon('CV')}}>Download CV</div>
             </div>
             {this.state.changeDescription? (
               <div className="home-page-description-small">
