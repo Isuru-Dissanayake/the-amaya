@@ -1,7 +1,111 @@
 .Skills-page-section {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 800px;
   overflow: hidden;
   background-color: #1f1f1f;
+}
+.skiils-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  height: 800px;
+  margin: 20px;
+}
+.skill-container-row {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 30%;
+  width: 100%;
+}
+.skill-element{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+  width: 30%;
+  background-color: #222222;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.skill-element:hover {
+  -webkit-box-shadow: 27px 19px 30px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: 27px 19px 30px -13px rgba(0,0,0,0.75);
+  box-shadow: 27px 19px 30px -13px rgba(0,0,0,0.75);
+}
+.skill-element-center-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+  width: 30%;
+  background-color: #8eb849;
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+}
+@media screen and (min-width: 801px) {
+  .skiils-container {
+    width: 800px;
+    height: 800px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 800px) {
+  .skiils-container {
+    width: 100vw;
+    height: 100vw;
+    margin: 0;
+  }
+}
+.single-chart {
+  position: absolute;
+  display: none;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around ;
+}
+.skill-name {
+  position: absolute;
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+.skill-element:hover .single-chart{
+  display: block;
+}
+.circular-chart {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.circle-bg {
+  fill: none;
+  stroke: #222222;
+  stroke-width: 1;
+}
+.circle {
+  fill: none;
+  stroke-width: 0.8;
+  stroke-linecap: round;
+  animation: progress 1.5s ease-out forwards;
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.circular-chart.orange .circle {
+  stroke: tomato;
 }
