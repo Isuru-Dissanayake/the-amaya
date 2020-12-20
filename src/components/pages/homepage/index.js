@@ -68,7 +68,7 @@ class HomePage extends React.Component {
     }
   }
   componentDidMount = () => {
-    ReactGA.initialize('256784480');
+    ReactGA.initialize('UA-145048078-1');
     window.addEventListener("resize", this.changeDescriptionDiv);
     this.changeDescriptionDiv();
     Events.scrollEvent.register('begin', function(to, element) {});
