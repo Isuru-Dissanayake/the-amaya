@@ -106,7 +106,7 @@ class HomePage extends React.Component {
               <FontAwesomeIcon icon={faGithubSquare} className="home-social-icons" onClick={() => {this.onClickSocialIcon('Github')}}/>
               <FontAwesomeIcon icon={faMedium} className="home-social-icons" onClick={() => {this.onClickSocialIcon('Medium')}}/>
               <FontAwesomeIcon icon={faYoutubeSquare} className="home-social-icons" onClick={() => {this.onClickSocialIcon('Youtube')}}/>
-              <div className="download-cv" onClick={() => {this.onClickSocialIcon('CV')}}>Download CV</div>
+              <div id="download-button" className="download-cv" onClick={() => {this.onClickSocialIcon('CV')}}>Download CV</div>
             </div>
             {this.state.changeDescription? (
               <div className="home-page-description-small">
