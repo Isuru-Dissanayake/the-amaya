@@ -1,7 +1,80 @@
 .Achievements-page-section {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #222222;
+}
+.achievements-container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-top: 40px;
+  margin-right: 80px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+.section-title {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.achievements-card {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(138deg, rgba(79,79,79,1) 0%, rgba(47,47,47,1) 26%, rgba(34,34,34,1) 63%);
+  transition: all 0.5s;
+}
+.achievements-card-other {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #222222;
+  transition: all 0.5s;
+}
+.achievements-card-other:hover {
+  -webkit-box-shadow: 28px 20px 25px -21px rgba(0,0,0,0.75);
+  -moz-box-shadow: 28px 20px 25px -21px rgba(0,0,0,0.75);
+  box-shadow: 28px 20px 25px -21px rgba(0,0,0,0.75);
+}
+.achievements-card:hover {
+  -webkit-box-shadow: 28px 20px 25px -21px rgba(0,0,0,0.75);
+  -moz-box-shadow: 28px 20px 25px -21px rgba(0,0,0,0.75);
+  box-shadow: 28px 20px 25px -21px rgba(0,0,0,0.75);
+}
+.achievements-card-title {
+  display: flex;
+  font-size: 18px;
+  color: white;
+}
+.achievements-card-description {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 20px;
+  color: rgb(211, 211, 211);
+}
+.achievements-card-item{
   display: flex;
   width: 100%;
-  height: 890px;
-  overflow: hidden;
-  background-color: tomato;
+  margin-bottom: 8px;
+}
+.gradient-line {
+  align-self: center;
+  margin-left: 30px;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+}
+.gradient {
+  background: linear-gradient(270deg, #8eb849, #ff6347);
+  background-size: 400% 400%;
+  animation: AnimationName 10s ease infinite;
+}
+.year {
+  margin-left: auto;
 }

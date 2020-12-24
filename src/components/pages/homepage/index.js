@@ -137,7 +137,9 @@ class HomePage extends React.Component {
         <FadeInSection>
         <SkillsPage/>
         </FadeInSection>
+        <FadeInSection>
         <AchievementsPage/>
+        </FadeInSection>
       </div>
     );
   }

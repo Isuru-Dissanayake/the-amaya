@@ -11,15 +11,15 @@ class SkillsPage extends React.Component {
         <div className="skiils-container">
           <div className="skill-container-row">
             <div className="skill-element">
-              <div class="single-chart">
-                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg"
+              <div className="single-chart">
+                <svg viewBox="0 0 36 36" className="circular-chart orange">
+                  <path className="circle-bg"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
-                  <path class="circle"  
-                    stroke-dasharray="90, 100"
+                  <path className="circle"  
+                    strokeDasharray="90, 100"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -29,15 +29,15 @@ class SkillsPage extends React.Component {
               <div className="skill-name">Python</div>
             </div>
             <div className="skill-element">
-              <div class="single-chart">
-                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg"
+              <div className="single-chart">
+                <svg viewBox="0 0 36 36" className="circular-chart orange">
+                  <path className="circle-bg"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
-                  <path class="circle"  
-                    stroke-dasharray="80, 100"
+                  <path className="circle"  
+                    strokeDasharray="80, 100"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -47,15 +47,15 @@ class SkillsPage extends React.Component {
               <div className="skill-name">MATLAB</div>
             </div>
             <div className="skill-element">
-              <div class="single-chart">
-                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg"
+              <div className="single-chart">
+                <svg viewBox="0 0 36 36" className="circular-chart orange">
+                  <path className="circle-bg"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
-                  <path class="circle"  
-                    stroke-dasharray="40, 100"
+                  <path className="circle"  
+                    strokeDasharray="40, 100"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -67,15 +67,15 @@ class SkillsPage extends React.Component {
           </div>
           <div className="skill-container-row">
             <div className="skill-element">
-              <div class="single-chart">
-                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg"
+              <div className="single-chart">
+                <svg viewBox="0 0 36 36" className="circular-chart orange">
+                  <path className="circle-bg"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
-                  <path class="circle"  
-                    stroke-dasharray="80, 100"
+                  <path className="circle"  
+                    strokeDasharray="80, 100"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -86,15 +86,15 @@ class SkillsPage extends React.Component {
             </div>
             <div className="skill-element-center-element">Skils</div>
             <div className="skill-element">
-              <div class="single-chart">
-                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg"
+              <div className="single-chart">
+                <svg viewBox="0 0 36 36" className="circular-chart orange">
+                  <path className="circle-bg"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
-                  <path class="circle"  
-                    stroke-dasharray="60, 100"
+                  <path className="circle"  
+                    strokeDasharray="60, 100"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -106,15 +106,15 @@ class SkillsPage extends React.Component {
           </div>
           <div className="skill-container-row">
             <div className="skill-element">
-              <div class="single-chart">
-                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg"
+              <div className="single-chart">
+                <svg viewBox="0 0 36 36" className="circular-chart orange">
+                  <path className="circle-bg"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
-                  <path class="circle"  
-                    stroke-dasharray="60, 100"
+                  <path className="circle"  
+                    strokeDasharray="60, 100"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -124,15 +124,15 @@ class SkillsPage extends React.Component {
               <div className="skill-name">ROS</div>
             </div>
             <div className="skill-element">
-              <div class="single-chart">
-                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg"
+              <div className="single-chart">
+                <svg viewBox="0 0 36 36" className="circular-chart orange">
+                  <path className="circle-bg"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
-                  <path class="circle"  
-                    stroke-dasharray="70, 100"
+                  <path className="circle"  
+                    strokeDasharray="70, 100"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -142,15 +142,15 @@ class SkillsPage extends React.Component {
               <div className="skill-name">Altium</div>
             </div>
             <div className="skill-element">
-              <div class="single-chart">
-                <svg viewBox="0 0 36 36" class="circular-chart orange">
-                  <path class="circle-bg"
+              <div className="single-chart">
+                <svg viewBox="0 0 36 36" className="circular-chart orange">
+                  <path className="circle-bg"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
-                  <path class="circle"  
-                    stroke-dasharray="80, 100"
+                  <path className="circle"  
+                    strokeDasharray="80, 100"
                     d="M18 2.0845
                       a 15.9155 15.9155 0 0 1 0 31.831
                       a 15.9155 15.9155 0 0 1 0 -31.831"

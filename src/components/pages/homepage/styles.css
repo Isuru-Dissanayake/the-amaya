@@ -132,13 +132,6 @@
     font-size: 50px;
   }
 }
-.Achievements-page-section {
-  display: flex;
-  width: 100%;
-  height: 890px;
-  overflow: hidden;
-  background-color: tomato;
-}
 .home-page-description {
   cursor: default;
   position: relative;
