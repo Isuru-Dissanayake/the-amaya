@@ -3,8 +3,10 @@ import './styles.css'
 import amayaPhoto from '../../../assets/images/amaya.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare, faMedium, faLinkedin, faYoutubeSquare } from "@fortawesome/free-brands-svg-icons"
+import { faGripHorizontal } from '@fortawesome/free-solid-svg-icons'
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import ReactGA from 'react-ga';
+import HorizontalScroll from 'react-scroll-horizontal'
 
 import { EducationPage, ResearchPage, SkillsPage, AchievementsPage } from '../index'
 
@@ -34,6 +36,7 @@ class HomePage extends React.Component {
     this.state = {
       showEduCard: false,
       changeDescription : false,
+      changeNavBar: false,
       title : "Amaya Dharmasiri"
     }
     this.navItems = ['About','Education', 'Research', 'Skills', 'Achievements']
@@ -67,10 +70,20 @@ class HomePage extends React.Component {
       this.setState({changeDescription: false});
     }
   }
+  changeNavBarDiv = () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth < 700){
+      this.setState({changeNavBar: true});
+    } else {
+      this.setState({changeNavBar: false});
+    }
+  }
   componentDidMount = () => {
     ReactGA.initialize('UA-145048078-1');
     window.addEventListener("resize", this.changeDescriptionDiv);
+    window.addEventListener("resize", this.changeNavBarDiv);
     this.changeDescriptionDiv();
+    this.changeNavBarDiv();
     Events.scrollEvent.register('begin', function(to, element) {});
     Events.scrollEvent.register('end', function(to, element) {});
     scrollSpy.update();
@@ -82,23 +95,45 @@ class HomePage extends React.Component {
   render() {
     return (
       <div id="home-container" className="home-container">
-        <div className="nav-bar">
-          <Link activeClass="active-item" to="Home-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
-            About
-          </Link>
-          <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
-            Education
-          </Link>
-          <Link activeClass="active-item" to="Research-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
-            Research
-          </Link>
-          <Link activeClass="active-item" to="Skills-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
-            Skills
-          </Link>
-          <Link activeClass="active-item" to="Achievements-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
-            Achievements
-          </Link>
-        </div>
+        {!this.state.changeNavBar? (
+          <div className="nav-bar">
+            <Link activeClass="active-item" to="Home-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+              About
+            </Link>
+            <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+              Education
+            </Link>
+            <Link activeClass="active-item" to="Research-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+              Research
+            </Link>
+            <Link activeClass="active-item" to="Skills-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+              Skills
+            </Link>
+            <Link activeClass="active-item" to="Achievements-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+              Achievements
+            </Link>
+          </div>
+        ):(
+          <div className="nav-bar-small">
+            <HorizontalScroll>
+            <Link activeClass="active-item" to="Home-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+              About
+            </Link>
+            <Link activeClass="active-item" to="Education-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+              Education
+            </Link>
+            <Link activeClass="active-item" to="Research-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+              Research
+            </Link>
+            <Link activeClass="active-item" to="Skills-page-section" spy={true} smooth={true} duration={500} offset={-110} className="nav-bar-item">
+              Skills
+            </Link>
+            <Link activeClass="active-item" to="Achievements-page-section" spy={true} smooth={true} duration={500} offset={-90} className="nav-bar-item">
+              Achievements
+            </Link>
+            </HorizontalScroll>
+          </div>
+        )}
         <Element name="Home-page-section" className="home-page-section fade-in">
           <div className="home-page-welcome">
             <div className="home-page-fname">Amaya</div>

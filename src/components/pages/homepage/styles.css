@@ -38,7 +38,18 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: 90px;
+  height: 70px;
+  position: fixed;
+  background-color: #222222;
+  z-index: 5;
+}
+.nav-bar-small {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  height: 70px;
   position: fixed;
   background-color: #222222;
   z-index: 5;
@@ -120,7 +131,7 @@
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 800px) {
   .home-page-photo-div {
-    margin-left: -15%;
+    margin-left: -22%;
   }
   .home-page-welcome {
     margin-left: 5%;
@@ -196,4 +207,8 @@
 }
 .download-cv:hover {
   background-color: tomato;
+}
+.navbar-icon {
+  font-size: 30px;
+  color: #8eb849;
 }
